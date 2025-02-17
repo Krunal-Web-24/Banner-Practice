@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Australian Ballet - banners</title>
+<meta name="ad.size" content="width=160,height=600">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script type="text/javascript">var clickTag1 = "https://australianballet.com.au/performances/nijinsky?utm_source=cm&utm_medium=display&utm_campaign=nij&utm_content=advct_&utm_term=2412_s025_vicmel_nij___html5";</script>
+<style>
+/*--CSS start here--*/
+* { margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+body {-webkit-font-smoothing: antialiased;}
+img { border: 0; vertical-align: top; }
+.banner-box {cursor: pointer;  background: #ffffff; margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position: relative; width: 160px; height: 600px; overflow: hidden; border:1px solid #000000; -webkit-user-select: none; user-select: none; }
+
+.all_frame {  width: 100%;  height: 100%;  left: 0; top: 0;   position: absolute;}
+.all_frame div{position: absolute;}
+.main_img { left: -1px; top: -1px;   overflow: hidden;   }
+.main_img img { width: 160px; height: 600px;  }
+
+.frame1, .frame2, .frame3, .frame4, .red-frame{left: 0;top: 0;overflow: hidden;width: 160px;height: 600px;}
+.frame4, .red-frame{background: #B41C21;}
+
+.f1_logo{left: 14px;top: 23px;}
+.f1_logo img{max-width: 128.6px;}
+.f1_text1{top: 96px;left: 14px;}
+.f1_text1 img{max-width: 53.6px;}
+
+.f2_text1{top: 509px; left: 10px;}
+.f2_text1 img{max-width: 133px;}
+.f2_text2{top: 559px; left: 15px;}
+.f2_text2 img{max-width: 131px;}
+.f2_text3{top: 533px; left: 12px;}
+.f2_text3 img{max-width: 131px;}
+
+.f3_star{left: 9px;top: 246px;}
+.f3_star img{max-width: 141px;}
+
+.f4_text1{left: 13px;top: 271px;}
+.f4_text1 img{max-width: 125px;}
+.f4_cta{left: 13px;bottom: 22px;}
+.f4_cta img{max-width: 120px;}
+
+.red_fr_text1{top: 248px;left: 33px;}
+.red_fr_text1 img{width: 118px;}
+.red_fr_text2{top: 298px;left: 54px;}
+.red_fr_text2 img{width: 97px;}
+.red_fr_text3{top: 325px;left: 15px;}
+.red_fr_text3 img{width: 131px;}
+
+.f1_text1, .f1_text2, .f2_text1, .f2_text2, .f3_logo, .f3_text1, .f4_cta, .frame3, .f3_star, .frame4, .red-frame, .red_fr_text1, .red_fr_text2, .red_fr_text3{opacity: 0;}
+
+.f3_logo{z-index: 999;}
+</style>
+</head>
+<body>
+<!--Banner start here-->
+<div class="banner-box" >
+  <div class="all_frame">
+    <div id="main_link" id="clickTagLayer" onclick="javascript:window.open(window.clickTag1)">		 
+      <div class="main_img"><img src="bg_img.jpg" alt=""></div>
+      <div class="frame1">
+        <div class="f1_text1"><img src="f1_text1.png" alt=""></div>
+      </div>
+      <div class="frame2">
+        <div class="f2_text1"><img src="f2_text1.png" alt=""></div>
+        <div class="f2_text2"><img src="f2_text2.png" alt=""></div>
+        <div class="f2_text3"><img src="f2_text3.png" alt=""></div>
+      </div>	 
+      <div class="red-frame">
+        <div class="red_fr_text1"><img src="red_fr_text1.png" alt=""></div>
+        <div class="red_fr_text2"><img src="red_fr_text2.png" alt=""></div>
+        <div class="red_fr_text3"><img src="red_fr_text3.png" alt=""></div>
+      </div>
+      <div class="frame3">       
+        <div class="f3_star"><img src="f3_star.png" alt=""></div>
+      </div>   
+      <div class="frame4">        
+        <div class="f4_text1"><img src="f4_text1.png" alt=""></div> 
+        <div class="f4_cta"><img src="f4_cta.png" alt=""></div>
+      </div>
+      <div class="f1_logo"><img src="f1_logo.png" alt=""></div>
+    </div>
+  </div>
+</div>
+<!--Banner end here-->
+
+<!-- ********** CUSTOM JS ********** -->
+<script>
+    // <!--GSAP JS start here-->
+    //--------------- SET -----------------
+    gsap.set(".banner-box", { display: 'block' });
+    //---------- ADD ANIMATION ------------
+    gsap
+      .timeline({
+        delay: 0.5,
+        defaults: {
+          duration: 0.1,
+          ease: 'none'
+        },
+        repeat: 2,
+        repeatDelay: 3,
+      })
+      //=========================
+      .add('Scene1') 
+      .fromTo('.f1_text1', {opacity: 0}, {opacity: 1, duration: 0, delay: 0, ease: "power1.out"}, 'Scene1')
+      .fromTo('.main_img img', {opacity: 0}, {opacity: 1, duration: 0, delay: 0, ease: "power1.out"}, 'Scene1')
+      
+      .add('Scene2')   
+      .fromTo('.f2_text1', {opacity: 0}, {opacity: 1, duration: 0.5, delay: 1, ease: "power2.out"}, 'Scene2')
+      .fromTo('.f2_text2', {opacity: 0}, {opacity: 1, duration: 0.5, delay: 2, ease: "power2.out"}, 'Scene2')
+      .fromTo('.f2_text3', {opacity: 0}, {opacity: 1, duration: 0.5, delay: 1.5, ease: "power2.out"}, 'Scene2')
+      
+      .add('Scene3') 
+      .to('.frame2, .f1_text1', { opacity: 0, duration: 0.5, delay: 1.5, ease: "power1.out" }, 'Scene3') 
+      .to('.main_img', {opacity: 0, duration: 0.5, delay: 1.5, ease: "power1.out"}, 'Scene3')
+      .fromTo('.red-frame', {opacity: 0}, {opacity: 1, duration: 0.5, delay: 1.5, ease: "power2.out"}, 'Scene3')
+      .fromTo('.red_fr_text1', {opacity: 0}, {opacity: 1, duration: 0.5, delay: 2, ease: "power2.out"}, 'Scene3')
+      .fromTo('.red_fr_text2', {opacity: 0}, {opacity: 1, duration: 0.5, delay: 2.5, ease: "power2.out"}, 'Scene3')
+      .fromTo('.red_fr_text3', {opacity: 0}, {opacity: 1, duration: 0.5, delay: 3, ease: "power2.out"}, 'Scene3')
+      
+      .add('Scene4')
+      .to('.red-frame', {opacity: 0, duration: 0.5, delay: 1.5, ease: "power2.out"}, 'Scene4')
+      .to('.main_img', {opacity: 1, duration: 0.5, delay: 1.5, ease: "power1.out"}, 'Scene4')
+      .to('.frame3', { opacity: 1, duration: 0.5, delay: 1.5, ease: "power1.out" }, 'Scene4')
+      .to('.f3_star', { opacity: 1, duration: 0.5, delay: 2, ease: "power1.out" }, 'Scene4')
+
+      .add('Scene5') 
+      .to('.frame3, .main_img', { opacity: 0, duration: 0.5, delay: 2, ease: "power1.out" }, 'Scene5') 
+      .to('.frame4', { opacity: 1, duration: 0.5, delay: 2, ease: "power1.out" }, 'Scene5')    
+      .to('.f4_text1', { opacity: 1, duration: 0.5, delay: 2.5, ease: "power1.out" }, 'Scene5')
+      .fromTo('.f4_cta', {opacity: 0}, {opacity: 1, duration: 0.6, delay: 3, ease: "power1.out"}, 'Scene5')
+      //-------------------------------------
+      // <!--GSAP JS end here-->
+</script>
+
+</body>
+</html>

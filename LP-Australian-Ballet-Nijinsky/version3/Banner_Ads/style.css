@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body, * { box-sizing: border-box; color: #000000; font-family: 'Roboto', sans-serif; }
+h1 { font-size: 2rem; }
+.wrapper { display: flex; align-items: stretch;}
+.up .wrapper { min-height: 100vh; }
+a { text-decoration: none; color: #000000; transition: all 0.5s; }
+ul { list-style: none; padding: 0; margin: 0; }
+.sidebar ul li { padding: 5px 0; }
+.up .sidebar { width: 100%; max-width: 300px; background: #ffffff; transition: all 0.6s; transform-origin: bottom left; padding: 20px 0px 20px 15px; position: fixed; height: 100%; overflow-y: auto; }
+.up .sidebar span { display: block; font-size: 20px; font-weight: 700; }
+.up .banner-container { margin-top: 20px; }
+.up .single_banner ul li a { display: inline-block; margin: 0 20px; }
+.common_btn a { display: inline-block; min-width: 180px; background-color: #000000; text-align: center; color: #ffffff; padding: 10px 15px; border-radius: 5px; }
+.common_btn { margin-top: 20px; }
+.common_btn a:hover { background: #221649; }
+.banner_wrapper { margin-left: 300px; border-left: 1px dotted #afafaf; }
