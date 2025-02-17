@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AMEX Travel</title>
+<meta name="ad.size" content="width=300,height=600">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">var clickTag = "#";</script>
+<style>
+/*--CSS start here--*/
+* { margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+img { border: 0; vertical-align: top; }
+.banner-box {  background: #fff; margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position: relative; width: 300px; height: 600px; overflow: hidden; border:1px solid #75787B; -webkit-user-select: none; user-select: none; cursor: pointer; }
+.all_frame div {position: absolute;}
+.all_frame {width: 100%; height: 100%; left: 0; top: 0; position: absolute;}
+
+.frame1, .frame2, .frame3 { width: 100%; height: 100%; }
+.all_frame img { max-width: 300px; }
+
+.bg{top: -1px;left: -1px;}
+.logo{top: 12px;left: 13px;}
+.logo img{max-width: 42px;}
+.right-logo{top: 6px; right: 3px;}
+.right-logo img{ max-width: 110px;}
+.cta{bottom: 7px; right: 9px;}
+.cta img{max-width: 103px;}
+.location{left: 17px;bottom: 10px;}
+.location img{max-width: 173px;}
+.location_text2{left: 17px;bottom: 10px;}
+.location_text2 img{max-width: 173px;}
+.ribbon-text {top: 263px; right: -1px;}
+.ribbon-text img {max-width: 245px;}
+
+.frame1{top: 388px;left: 19px;}
+.f1_text1 img{max-width: 264px;}
+.frame2{top: 389px;left: 19px;}
+.f2_text1 img{max-width: 241px;}
+.star_line{top: 90px;}
+.star_line img{width: 263px;}
+.frame3{top: 390px;left: 19px;}
+.f3_text1 img{max-width: 212px;}
+.f3_text2 img{max-width: 245px;}
+
+.f1_text1,  .f2_text1, .f3_text1, .f3_text2, .ribbon-text, .location_text2, .star_line { opacity: 0; }    
+
+.page_loader{width: 100%;height: 100%;position: absolute;z-index: 1000;background: #fff;}
+
+/*--CSS end here--*/
+
+</style>
+</head>
+<body>
+<!--Banner start here-->
+<div class="banner-box" id="clickTagLayer" onclick="javascript:window.open(window.clickTag)">
+    <div class="all_frame">
+        <div class="bg"><img src="main_bg.jpg" alt="main_bg"></div> 
+        <div class="logo"><img src="left-logo.jpg" alt="left-logo"></div>
+        <div class="right-logo"><img src="right-logo.png" alt="right-logo"></div>
+        <div class="cta"><img src="cta.png" alt="cta"></div> 
+        <div class="location"><img src="location.png" alt="location"></div>
+        <div class="location_text2"><img src="location_text2.png" alt="location"></div>
+        <div class="ribbon-text"><img src="AMEX-Ribbon.png" alt="AMEX-Ribbon"></div>
+        <div class="frame1">     
+            <div class="f1_text1"><img src="f1_text1.png" alt="f1_text1"></div>    
+        </div>
+        <div class="frame2">
+            <div class="f2_text1"><img src="f2_text1.png" alt="f2_text1"></div>  
+            <div class="star_line"><img src="star_line.png" alt="star_line"></div>  
+        </div>        
+        <div class="frame3">
+            <div class="f3_text1"><img src="f3_text1.png" alt="f3_text1"></div>  
+            <div class="f3_text2"><img src="f4_text1.png" alt="f4_text1"></div>
+        </div>
+    </div>
+    <div class="page_loader">
+</div>
+</div>
+<!--Banner end here-->
+
+<!-- ********** CUSTOM JS ********** -->
+<script>
+    // <!--GSAP JS start here-->
+    //--------------- SET -----------------
+    gsap.set(".all_frame", { display: 'block', opacity: 1 });
+    //---------- Animation Event ------------
+    const animationComplete = new CustomEvent('animationComplete')
+    //---------- ADD ANIMATION ------------
+    function startAnimation() {
+        const timeline = gsap.timeline({
+            delay: 0.5,
+            defaults: {
+                duration: 0.1,
+                ease: 'none'
+            },
+        })
+      //=========================
+
+    .add('Scene1')       
+        .to('.f1_text1', { opacity: 1, duration: 0.5, delay: 0.3, ease: "ease-in-out" }, 'Scene1')
+        .fromTo('.ribbon-text', {opacity: 0, x: 15},{opacity: 1, x:0, duration: 0.5, delay: 0.3, ease: "ease-in-out" }, 'Scene1')
+
+    .add('Scene2') 
+        .to('.frame1', { opacity: 0, duration: 0.5, delay: 5, ease: "power0.Out" }, 'Scene2')  
+        .fromTo('.ribbon-text', {x: 0},{opacity: 0, x: 15, duration: 0.5, delay: 5, ease: "ease-in-out" }, 'Scene2')
+        .to('.f2_text1', { opacity: 1, duration: 0.5, delay: 5.5, ease: "power0.Out" }, 'Scene2') 
+        .to('.star_line', { opacity: 1, duration: 0.5, delay: 6, ease: "power0.Out" }, 'Scene2') 
+
+    .add('Scene3')
+        .to('.frame2', { opacity: 0, duration: 0.5, delay: 5, ease: "power0.Out" }, 'Scene3')
+        .to('.f3_text1', { opacity: 1, duration: 0.5, delay: 5.5, ease: "power0.Out" }, 'Scene3')
+    
+    .add('Scene4')
+        .to('.f3_text1, .location', { opacity: 0, duration: 0.5, delay: 5, ease: "power0.Out" }, 'Scene4')
+        .to('.f3_text2', { opacity: 1, duration: 0.5, delay: 5.5, ease: "power0.Out" }, 'Scene4')
+        .to('.f3_text2, .location_text2', { opacity: 1, duration: 0.5, delay: 5.5, ease: "power0.Out" }, 'Scene4')
+    
+    }
+
+    $(window).on('load', function() {
+      // Hide the loader after everything is loaded
+        $('.page_loader').fadeOut(0, function() {
+        // Start the animation once the loader is gone
+            startAnimation();
+        });
+    });
+
+     //-------------------------------------
+</script>
+
+</body>
+</html>

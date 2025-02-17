@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Trade Radar</title>
+<meta name="ad.size" content="width=320,height=480">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.11.5_min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">var clickTag = "https://www.google.com";</script>
+<style>
+/*--CSS start here--*/
+* { margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+body {-webkit-font-smoothing: antialiased;}
+img { border: 0; vertical-align: top; }
+.banner-box {  background: #0D1F23; margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position: relative; width: 320px; height: 480px; overflow: hidden; border:1px solid #0D1F23; -webkit-user-select: none; user-select: none; cursor: pointer; }
+.all_frame div {position: absolute;}
+.all_frame {width: 100%; height: 100%; left: 0; top: 0; position: absolute;}
+
+.cta {top: 319px;}
+.cta img {max-width: 89px;}
+
+.btm_text {bottom: 11px;}
+.btm_text img {max-width: 266px}
+
+.w_100 > div {position: relative !important;text-align: center;}
+.w_100 {width: 100%;}
+
+.tilte_line1 {top: 151px;}
+.tilte_line1 img {max-width: 222px;}
+.tilte_line2 {top: 186px;}
+.tilte_line2 img {max-width: 202px;}
+.tilte_line3 {top: 234px;}
+.tilte_line3 img {max-width: 250px;}
+.tilte_line4 {top: 186px;}
+.tilte_line4 img {max-width: 202.5px;}
+.tilte_line5 {top: 213px;}
+.tilte_line5 img {max-width: 240.5px;}
+.tilte_line6 {top: 242px;}
+.tilte_line6 img {max-width: 225.5px;}
+
+.cta,.btm_text,.bell,.coin,.logo_text { opacity: 0; }
+.hidden {overflow: hidden;}
+
+.main_logo {bottom: 75px;left: 78px;width: 100%;}
+.logo_text {width: auto;position: relative !important;}
+.logo_trade_l_1 img {max-width: 162px;}
+
+.bell { left: 200px; top: 56px; }
+.bell img { max-width: 45.5px; }
+.coin { left: 59px; top: 18px; }
+.coin img { max-width: 88px; }
+
+.chart {  position: absolute;  top: 20px;  left: -1px;  overflow: hidden;}
+.customPolyline {
+    fill: none;
+    stroke: #15c678;
+    stroke-width: 0.99px;
+}
+
+.page_loader{width: 100%;height: 100%;position: absolute;z-index: 1000;background: #fff;}
+
+
+
+/*--CSS end here--*/
+
+</style>
+</head>
+<body>
+<!--Banner start here-->
+<div class="banner-box" id="clickTagLayer" onclick="javascript:window.open(window.clickTag)">
+  <div class="all_frame" >
+    <div class="main_logo">
+      <div class="logo_trade_l_1 hidden"><div class="logo_text"><img src="main_logo.png" alt=""></div></div>
+    </div>
+
+    <div class="tilte_line1 hidden w_100"><div class="Innerline"><img src="f1_title_line1.png" alt=""></div></div>
+    <div class="tilte_line2 hidden w_100"><div class="Innerline"><img src="f1_title_line2.png" alt=""></div></div>
+    <div class="tilte_line3 hidden w_100"><div class="Innerline1"><img src="f2_title_line1.png" alt=""></div></div>
+    <div class="tilte_line4 hidden w_100"><div class="Innerline2"><img src="f3_title_line1.png" alt=""></div></div>
+    <div class="tilte_line5 hidden w_100"><div class="Innerline2"><img src="f3_title_line2.png" alt=""></div></div>
+    <div class="tilte_line6 hidden w_100"><div class="Innerline2"><img src="f3_title_line3.png" alt=""></div></div>
+
+
+
+    <div class="cta w_100"><div><img src="cta.png" alt=""></div></div>
+    <div class="btm_text w_100"><div><img src="btm_text.png"></div></div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" id="a" class="chart" width="320.399" height="65.482" viewBox="0 0 320.399 65.482">
+      <path id="wavePath" class="chart-path" data-name="Stroke 1" d="M0,30.848l11.523-3.4L24.5,36.769l7.869,9.975,9.25-1.484,8.447,9.43H58.9l5.137,5.087,12.872,4.86L92.14,55.209l7.921,4.891L106.1,48.295l6.656-.328h5.477l8.309-2.184,8.473-11.97,15.44-.775,7.94-9.953,11.128,7.775,6.335,7.236,3.959,1.4,6.405,11.349,3.885-4.28,4.617,1.661,5.673.873,4.377,9.055,4.937-13.335,9.427-17.895,10,.671,4.156-8.178,4.044,7.507,5.024,3.924V27.6L256.426,9.57l4.665,17.354,5.147-3.057,10.29-8.292,4.389,3.842,7.719-2.446,5.9-3.057,3.631,1.661h5.908l6.428-8.207L320,0" transform="translate(0.126 0.352)" fill="none" stroke="#15c678" stroke-miterlimit="10" stroke-width="0.891"/>
+    </svg>
+
+
+    <div class="bell">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48.096" height="34.199" viewBox="0 0 48.096 34.199">
+        <g id="Group_8" data-name="Group 8" transform="translate(0.414)">
+          <g id="Group_3" data-name="Group 3" transform="translate(0 1.837)">
+            <path id="Fill_5" data-name="Fill 5" d="M5.2,20.973,0,20.988.05,2.606A2.616,2.616,0,0,1,2.657,0,2.582,2.582,0,0,1,5.249,2.591Z" transform="translate(8.722 1.77) rotate(-16)" fill="#fff" stroke="#0d1f23" stroke-miterlimit="10" stroke-width="0.5"/>
+            <path id="Stroke_11" data-name="Stroke 11" d="M7.317,3.681a3.7,3.7,0,0,1-3.669,3.7A3.651,3.651,0,0,1,0,3.7,3.7,3.7,0,0,1,3.669,0,3.651,3.651,0,0,1,7.317,3.681Z" transform="translate(14.463 24.958) rotate(-16)" fill="#fff" stroke="#262525" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.5"/>
+            <path id="Fill_13" data-name="Fill 13" d="M25.474,25.116,0,25.186l2.611-5.148.027-9.778A10.253,10.253,0,0,1,12.805,0,10.119,10.119,0,0,1,22.917,10.2l-.027,9.778Z" transform="translate(-0.105 7.095) rotate(-16)" fill="#262525"/>
+            <path id="Stroke_15" data-name="Stroke 15" d="M25.474,25.116,0,25.186l2.611-5.148.027-9.778A10.253,10.253,0,0,1,12.805,0,10.119,10.119,0,0,1,22.917,10.2l-.027,9.778Z" transform="translate(-0.105 7.095) rotate(-16)" fill="#edf1f7" stroke="#262525" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.5"/>
+            <path id="Stroke_19" data-name="Stroke 19" d="M0,5.725A10.085,10.085,0,0,0-1.756,0" transform="matrix(-0.788, -0.616, 0.616, -0.788, 5.836, 12.595)" fill="none" stroke="#0d1f23" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.5"/>
+            <path id="Stroke_23" data-name="Stroke 23" d="M4.472.494,0,.506" transform="translate(22.999 20.759) rotate(-16)" fill="none" stroke="#0d1f23" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.5"/>
+            <path id="Stroke_23-2" data-name="Stroke 23" d="M4.472.494,0,.506" transform="translate(7.771 25.171) rotate(-16)" fill="none" stroke="#0d1f23" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.5"/>
+          </g>
+          <g id="Group_7" data-name="Group 7" transform="translate(19.421)">
+            <g id="Group_6" data-name="Group 6">
+              <g id="Group_5" data-name="Group 5">
+                <rect id="Rectangle" width="28.261" height="15.792" rx="3.289" transform="translate(0)" fill="#ff5220"/>
+                <path id="Rectangle-2" data-name="Rectangle" d="M0,0H9.143L0,9.143Z" transform="translate(0 10.805)" fill="#ff5220"/>
+                <rect id="Rectangle-3" data-name="Rectangle" width="16.149" height="10.528" transform="translate(0 5.264)" fill="#ff5220"/>
+              </g>
+              <g id="Group" transform="translate(5.383 5.922)">
+                <ellipse id="Oval" cx="2.019" cy="1.974" rx="2.019" ry="1.974" transform="translate(0 0)" fill="#fff"/>
+                <ellipse id="Oval-2" data-name="Oval" cx="2.019" cy="1.974" rx="2.019" ry="1.974" transform="translate(6.729 0)" fill="#fff"/>
+                <ellipse id="Oval-3" data-name="Oval" cx="2.019" cy="1.974" rx="2.019" ry="1.974" transform="translate(13.458 0)" fill="#fff"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+
+
+    </div>
+    <div class="coin">
+      <img src="coin.gif">
+    </div>
+
+
+  </div>
+  <div class="page_loader">
+  </div>
+</div>
+
+<!--Banner end here-->
+
+<!-- ********** CUSTOM JS ********** -->
+<script>
+
+    // <!--GSAP JS start here-->
+    //--------------- SET -----------------
+    gsap.set(".all_frame", { display: 'block', opacity: 1 });
+    //---------- Animation Event ------------
+    const animationComplete = new CustomEvent('animationComplete')
+    //---------- ADD ANIMATION ------------
+
+    function startAnimation() {
+      const timeline = gsap.timeline({
+        delay: 0.1,
+        defaults: {
+          duration: 0.1,
+          ease: 'none'
+        },
+      });
+      //=========================
+      timeline.add('Scene1')
+      .to('.logo_text', { opacity: 1, duration: 0.8, delay: 0.5, ease: "power0.Out" }, 'Scene1') 
+      .to('.chart', { opacity: 1, duration: 1, delay: 0, ease: "power2.out" }, 'Scene1')
+      .fromTo('.coin', {scale:0,y:60},{ opacity:1,y:0,scale: 1,duration:1,delay: 0.8, ease: "power1.out" }, 'Scene1')
+      .fromTo('.bell',{scale:0} ,{ scale:1,opacity: 1, duration: 0.5, delay:1, ease: "power1.Out"}, 'Scene1')
+      .fromTo('#Group_3',{y:60} ,{ y:0,opacity: 1, duration: 0.8, delay:1, ease: "power1.Out"}, 'Scene1')
+      .fromTo('#Group_7',{y:60,scale:0} ,{ y:0,scale:1,opacity: 1, duration: 1, delay:1, ease: "power1.Out"}, 'Scene1')
+      
+      .to('.btm_text', { opacity: 1, duration: 0.8, delay: 0.5, ease: "power0.Out" }, 'Scene1')
+      .fromTo('.Innerline', { y: 30 }, { y: 0, duration: 0.5,delay: 0.5, stagger:0.22, ease: "power1.out" }, 'Scene1')
+      .fromTo('.Innerline1', { y: 30 }, {  y: 0, duration: 0.5, delay: 1, stagger:0.22, ease: "power1.out" }, 'Scene1')
+      .to('.Innerline1,.Innerline', { opacity: 0, duration: 0.5,delay: 4,ease: "power0.out" }, 'Scene1')
+      .fromTo('.Innerline2', { y: 40 }, {  y: 0, duration: 0.5, delay: 4.1, stagger:0.22, ease: "power1.out" }, 'Scene1')
+      // .fromTo('.Innerline3', { y: 40 }, {  y: 0, duration: 0.5, delay: 4.6, stagger:0.22, ease: "power1.out" }, 'Scene1')
+      .fromTo('.cta', { scale: 0 }, { 
+        keyframes: [
+          { scale: 1.2 },
+          { scale: 1 },
+        ], opacity:1, duration: 0.6,delay: 1.4,ease: 'power1.out'
+      },'Scene1')
+
+      .to('.cta', {
+        keyframes: [
+          { scale: 1.2 },
+          { scale: 1 },
+        ],
+        opacity: 1,
+        duration: 0.6,
+        delay: 7.4,
+        ease: "power0.out" 
+      }, 'Scene1')
+
+
+      const bellImgAnimation = gsap.fromTo(
+        '#Group_3',
+        { rotate: 0 },
+        {
+          keyframes: [
+            { rotate:8 },
+            { rotate: 0 },
+          ],
+          repeat: 4,
+          yoyo: true,
+          duration: 2,
+          ease: "power1.inOut",
+          delay: 1
+        }
+      );
+
+      const bellchatImgAnimation = gsap.fromTo(
+        '#Group_7',
+        { scale: 1 },
+        {
+          keyframes: [
+            { scale:0,y:10 },
+            { scale:1,y:0 },
+          ],
+          repeat: 0,
+          yoyo: true,
+          duration: 1,
+          ease: "power1.inOut",
+          delay: 3
+        }
+      );
+
+  }
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+      gsap.set('svg', {
+        visibility: 'visible'
+      });
+
+      let select = s => document.querySelector(s),
+          mainSVG = select('#a'), // Change to your SVG ID
+          pathData = select('#wavePath').getAttribute('d'),
+          numPoints = 400,
+          poly = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+          waveTimeline = null ;
+
+      poly.setAttribute('id', 'dynamicPolyline');
+      poly.classList.add('customPolyline');
+      poly.style.visibility = 'hidden'; // Initially hide the polyline
+      mainSVG.appendChild(poly);
+
+      // Function to create points for polyline based on path data
+      function createLine() {
+        let totalLength = select('.chart-path').getTotalLength();
+        let step = totalLength / numPoints;
+        let points = [];
+
+        // Create points for polyline from path data
+        for (let i = 0; i < numPoints; i++) {
+          let point = select('.chart-path').getPointAtLength(i * step);
+          points.push(`${point.x},${point.y}`);
+        }
+
+        poly.setAttribute('points', points.join(' '));
+      }
+
+      // Call createLine to initialize points for polyline
+      createLine();
+
+      // Function to animate the wave
+      function animateWave() {
+        waveTimeline = gsap.timeline();
+        waveTimeline.to(poly.points, {
+          y: '+=2', // Change y values to create wave motion
+          stagger: {
+            each: 0.005,
+            repeat: -1,
+            yoyo: true
+          },
+          ease: 'sine.inOut'
+        });
+      }
+
+      // Function to animate the chart path (draw the path first)
+      function animateChartPath() {
+        const chartPath = document.querySelector('.chart-path');
+
+        // Get the total length of the path dynamically
+        const pathLength = chartPath.getTotalLength();
+
+        // Set stroke properties for animation
+        gsap.set(chartPath, {
+          strokeDasharray: pathLength,
+          strokeDashoffset: pathLength,
+        });
+
+        // Animate the stroke from left to right
+        gsap.to(chartPath, {
+          delay: 0.1, // Start after other elements are visible
+          duration: 10, // Duration of the animation
+          strokeDashoffset: 0, // Reveal the path
+          ease: 'power1.inOut',
+          onComplete: () => {
+            poly.style.visibility = 'hidden'; // Make polyline visible after path animation completes
+            chartPath.style.visibility = 'visible'; // Hide the chart path
+            animateWave(); // Trigger wave animation after path animation completes
+          }
+        });
+      }
+
+      // Call the chart animation after the page loader fades out
+      $(window).on('load', function () {
+        $('.page_loader').fadeOut(0, function () {
+          animateChartPath(); // Trigger the chart path animation
+        });
+      });
+  });
+    
+
+  // Call the chart animation after the page loader fades out
+  $(window).on('load', function () {
+    $('.page_loader').fadeOut(0, function () {
+      startAnimation(); // Trigger the chart path animation
+    });
+  });
+</script>
+
+</body>
+</html>

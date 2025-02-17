@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>LYBALVI®</title>
+<meta name="ad.size" content="width=320,height=50">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+<script type="text/javascript">
+    var clickTag1 = "https://www.lybalvi.com/bipolar-1-disorder/about-lybalvi";
+    var clickTag2 = "https://labeling.alkermes.com/uspi_lybalvi.pdf";
+    var clickTag3 = "https://labeling.alkermes.com/medguide_lybalvi.pdf";
+</script>
+<style>
+/*--CSS start here--*/
+* { margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+img { border: 0; vertical-align: top; font-family: "Open Sans", sans-serif; }
+.banner-box {  background: #fff; margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position: relative; width: 320px; height: 50px; overflow: hidden; border:1px solid #000; -webkit-user-select: none; user-select: none; }
+.all_frame div { position: absolute; }
+.all_frame { width: 100%; height: 100%; left: 0; top: 0; position: absolute; }
+.all_frame .ss { left:-1px; top:-1px; }
+.all_frame .ss img { max-width: 320px; }
+
+.clickTag1 { position:absolute; left: 0; top: 0; width: 319px; height: 49px; cursor: pointer; }
+.clickTag2 { position: absolute; right: 73px; top: 1.5px; width: 74px; height: 9px; cursor: pointer; }
+.clickTag3 { position: absolute; right: 75px; top: 11px; width: 54px; height: 8px; cursor: pointer; }
+</style>
+</head>
+<body>
+<!--Banner start here-->
+<div class="banner-box">
+  <div class="all_frame">
+    <div class="main_frame">
+      <div class="backup_320x50 ss"><img data-src="backup_320x50.jpg" alt=""></div>
+    </div>
+  </div>
+  <div class="clickTag1 clicks" id="clickTagLayer" onclick="javascript:window.open(window.clickTag1)"></div>
+  <div class="clickTag2 clicks" id="prescribing_information" onclick="javascript:window.open(window.clickTag2)"></div>
+  <div class="clickTag3 clicks" id="medication_guide" onclick="javascript:window.open(window.clickTag3)"></div>
+</div>
+<!--Banner end here-->
+
+<!-- ********** CUSTOM JS ********** -->
+<script>
+  window.addEventListener('load', () => Promise.all([...document.querySelectorAll('img[data-src]')].map(img => new Promise((res, rej) => {
+    img.onload = res
+    img.src = img.dataset.src
+  }))).then(load))   
+</script>
+
+</body>
+</html>

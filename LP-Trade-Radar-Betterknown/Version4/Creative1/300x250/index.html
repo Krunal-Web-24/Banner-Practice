@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Trade Radar</title>
+<meta name="ad.size" content="width=300,height=250">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.11.5_min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">var clickTag = "https://www.google.com";</script>
+<style>
+/*--CSS start here--*/
+* { margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+body {-webkit-font-smoothing: antialiased;}
+img { border: 0; vertical-align: top; }
+.banner-box {  background: #0D1F23; margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position: relative; width: 300px; height: 250px; overflow: hidden; border:1px solid #0D1F23; -webkit-user-select: none; user-select: none; cursor: pointer; }
+.all_frame div {position: absolute;}
+.all_frame {width: 100%; height: 100%; left: 0; top: 0; position: absolute;}
+
+.cta {top: 186px;left: 210px;}
+.cta img {max-width: 75px;}
+
+.btm_text {bottom: 5px;left: 15px;}
+.btm_text img {max-width: 259px}
+
+.w_100 > div {position: relative !important;}
+/* .w_100 {width: 100%;} */
+.tilte_line1 {top: 114px;left: 16px;}
+.tilte_line1 img {max-width: 175px;}
+.tilte_line2 {top: 140px;left: 16px;}
+.tilte_line2 img {max-width: 175px;}
+
+.tilte_line5 {top: 176px;left: 16px;}
+.tilte_line5 img {max-width: 162px;}
+.tilte_line6 {top: 191px;left: 16px;}
+.tilte_line6 img {max-width: 162px;}
+
+.tilte_line8 {top: 205px;left: 16px;}
+.tilte_line8 img {max-width: 175px;}
+
+.cta,.btm_text ,.logo_text{ opacity: 0; }
+.hidden {overflow: hidden;}
+
+.main_logo {top: 14px;left: 15px;width: 100%;}
+.logo_text {width: auto;position: relative !important;}
+.logo_trade_l_1 img {max-width: 108px;}
+
+.page_loader{width: 100%;height: 100%;position: absolute;z-index: 1000;background: #fff;}
+
+.redarc_img{
+  opacity: 1;
+  width: 102px;
+  height: 102px;
+  right: 15px;
+  top: 16px;
+
+  --arc: 0;
+  transform: rotate(-180deg);
+  background: url(redarc_img.png) no-repeat center/contain;
+  -webkit-mask: conic-gradient(black var(--arc), transparent 0);
+  -moz-mask: conic-gradient(black var(--arc), transparent 0);
+  -ms-mask: conic-gradient(black var(--arc), transparent 0);
+  -o-mask: conic-gradient(black var(--arc), transparent 0);
+  mask: conic-gradient(black var(--arc), transparent 0);
+}
+
+.arc_img {
+  opacity: 1;
+  width: 102px;
+  height: 102px;
+  right: 15px;
+  top: 16px;
+
+  --arc: 0;
+  transform: rotate(-180deg);
+  background: url(arc_img.png) no-repeat center/contain;
+  -webkit-mask: conic-gradient(black var(--arc), transparent 0);
+  -moz-mask: conic-gradient(black var(--arc), transparent 0);
+  -ms-mask: conic-gradient(black var(--arc), transparent 0);
+  -o-mask: conic-gradient(black var(--arc), transparent 0);
+  mask: conic-gradient(black var(--arc), transparent 0);
+}
+.grey_img {
+  opacity: 1;
+  width: 92.5px;
+  height: 92.5px;
+  right: 20px;
+  top: 21px;
+
+  --arc: 0;
+  transform: rotate(-180deg);
+  background: url(grey_img.png) no-repeat center/contain;
+  -webkit-mask: conic-gradient(black var(--arc), transparent 0);
+  -moz-mask: conic-gradient(black var(--arc), transparent 0);
+  -ms-mask: conic-gradient(black var(--arc), transparent 0);
+  -o-mask: conic-gradient(black var(--arc), transparent 0);
+  mask: conic-gradient(black var(--arc), transparent 0);
+}
+.point_img{
+  opacity: 0;
+  width: 102px;
+  height: 102px;
+  right: 15px;
+  top: 16px;
+}
+.point_img img{max-width: 102px;}
+.alert_text{opacity: 0;transform: scale(0);right: 46px;top: 54px;}
+.alert_text img{max-width: 38px;text-align: center;}
+/*--CSS end here--*/
+
+</style>
+</head>
+<body>
+<!--Banner start here-->
+<div class="banner-box" id="clickTagLayer" onclick="javascript:window.open(window.clickTag)">
+  <div class="all_frame" >
+    <div class="main_logo">
+      <div class="logo_trade_l_1 hidden"><div class="logo_text"><img src="main_logo.png" alt=""></div></div>
+    </div>
+    <div class="redarc_img"></div>
+    <div class="arc_img"></div>
+    <div class="grey_img"></div>
+    <div class="point_img"><img src="point_img.png"></div>
+    <div class="alert_text"><img src="alert_text.png"></div>
+
+    <div class="tilte_line1 hidden w_100"><div class="Innerline"><img src="f1_title_line1.png" alt=""></div></div>
+    <div class="tilte_line2 hidden w_100"><div class="Innerline"><img src="f1_title_line2.png" alt=""></div></div>
+
+    <div class="tilte_line5 hidden w_100"><div class="Innerline1"><img src="f2_title_line1.png" alt=""></div></div>
+    <div class="tilte_line6 hidden w_100"><div class="Innerline1"><img src="f2_title_line2.png" alt=""></div></div>
+
+    <div class="tilte_line8 hidden w_100"><div class="Innerline2"><img src="f3_title_line1.png" alt=""></div></div>
+
+    <div class="cta w_100"><div><img src="cta.png" alt=""></div></div>
+    <div class="btm_text w_100"><div><img src="btm_text.png"></div></div>
+  </div>
+  <div class="page_loader">
+  </div>
+</div>
+
+<!--Banner end here-->
+
+<!-- ********** CUSTOM JS ********** -->
+<script>
+
+    // <!--GSAP JS start here-->
+    //--------------- SET -----------------
+    gsap.set(".all_frame", { display: 'block', opacity: 1 });
+    //---------- Animation Event ------------
+    const animationComplete = new CustomEvent('animationComplete')
+    //---------- ADD ANIMATION ------------
+
+    function startAnimation() {
+      const timeline = gsap.timeline({
+        delay: 0.1,
+        defaults: {
+          duration: 0.1,
+          ease: 'none'
+        },
+      });
+      //=========================
+      timeline.add('Scene1')
+      .to('.logo_text', { opacity: 1, duration: 0.8, delay: 0.5, ease: "power0.Out" }, 'Scene1')
+      .to('.arc_img', { '--arc': '100%', opacity: 1, duration: 1, delay: 0.6 }, 'Scene1')
+      .to('.redarc_img', { '--arc': '100%', opacity: 1, duration: 1, delay: 0.7 }, 'Scene1')
+      .to('.grey_img', { '--arc': '100%', opacity: 1, duration: 1, delay: 0.7 }, 'Scene1')
+      .to('.point_img', { opacity: 1, duration: 0, delay: 0.8 }, 'Scene1')
+      .fromTo('.point_img img', { rotation: 0 }, { rotation: 155, duration: 0.8, delay: 0.8 }, 'Scene1')
+      .fromTo('.point_img img', { rotation: 155 }, { rotation: 170, duration: 2, delay: 0 }, 'Scene1')
+      .fromTo('.point_img img', { rotation: 170 }, { rotation: 0, duration: 0.8, delay: 1.6 }, 'Scene1')
+      .to('.arc_img', {opacity: 0, duration: 0.2, delay: 1.6 }, 'Scene1')
+      
+      .to('.btm_text', { opacity: 1, duration: 0.8, delay: 0.5, ease: "power0.Out" }, 'Scene1')
+      .fromTo('.Innerline', { y: 30 }, { y: 0, duration: 0.5,delay: 0.8, stagger:0.22, ease: "power1.out" }, 'Scene1')
+      .fromTo('.Innerline1', { y: 20 }, {  y: 0, duration: 0.5, delay: 1.8 , stagger:0.22, ease: "power1.out" }, 'Scene1')
+      .fromTo('.Innerline2', { y: 20 }, {  y: 0, duration: 0.5, delay: 3 , stagger:0.22, ease: "power1.out" }, 'Scene1')
+      .fromTo('.cta', { scale: 0 }, { 
+        keyframes: [
+          { scale: 1.4 },
+          { scale: 1 },
+        ], opacity:1, duration: 0.6,delay: 3,ease: 'power1.out',stagger:0.3
+      },'Scene1')
+
+      gsap.fromTo(
+        '.alert_text', 
+        { opacity: 0, scale: 0 }, // Start values
+        { 
+          keyframes: [
+              { scale: 1.2 },
+              { scale: 1 }
+          ],
+          opacity: 1, 
+          delay: 1.8,
+          duration: 0.6, 
+          ease: "power1.out"
+        }
+      );
+      gsap.fromTo(
+        '.alert_text img', 
+        { scale: 1 }, // Start values
+        { 
+          keyframes: [
+                { scale: 1 },
+                { scale: 1.1 }
+          ],
+          scale: 1,
+          delay: 2.5, 
+          duration: 0.6, 
+          ease: "power1.out",
+          repeat: 3, // Repeats infinitely
+          yoyo: true, // Reverses the animation smoothly
+          onComplete: () => {
+          // Reset scale to 1 after the animation completes
+            gsap.to('.alert_text img', { scale: 1.1, duration: 1 });
+          }
+        }
+      );
+
+      const pointImgAnimation = gsap.fromTo(
+        '.point_img img',
+        { rotation: 0 },
+        {
+          rotation: 5,
+          repeat: -1,
+          yoyo: true,
+          duration: 0.5,
+          ease: "power1.inOut",
+          delay: 2.5,
+          paused: false // Initially paused
+        }
+      );
+
+      // Banner animation timeline
+      const bannerTimeline = gsap.timeline({
+        onComplete: () => {
+          // Pause the pointImgAnimation at the end of the banner animation
+          //pointImgAnimation.pause();
+          gsap.delayedCall(1.9, () => {
+            pointImgAnimation.pause();
+          });
+        }
+      });
+
+      bannerTimeline.add(timeline);
+
+      timeline.add('Scene1');
+  }
+    
+    
+
+  // Call the chart animation after the page loader fades out
+  $(window).on('load', function () {
+    $('.page_loader').fadeOut(0, function () {
+      startAnimation(); // Trigger the chart path animation
+    });
+  });
+</script>
+
+</body>
+</html>
+
+
+
+

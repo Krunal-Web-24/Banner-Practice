@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The Great Unwaste</title>
+<meta name="ad.size" content="width=728,height=90">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">var clickTag = "https://www.thegreatunwaste.com.au?utm_campaign=campaign-launch&utm_source=display&utm_medium=cpc&utm_term=storage&utm_content=728x90";</script>
+<style>
+/*--CSS start here--*/
+* { margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+body {-webkit-font-smoothing: antialiased;}
+img { border: 0; vertical-align: top; }
+.banner-box {  background: #ed1f8f; margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position: relative; width: 728px; height: 90px; overflow: hidden; border:1px solid #000; -webkit-user-select: none; user-select: none; cursor: pointer; }
+.all_frame div {position: absolute;}
+.all_frame {width: 100%; height: 100%; left: 0; top: 0; position: absolute;}
+
+.main_bg { left: -1px; top: -1px; }
+.main_bg img { max-width: 728px; }
+/*.pink_line { left: 0px; bottom: 0px; width: 100%; height: 4px; background: #ed1f8f; }*/
+.main_logo { right: 13px; top: 24px; }
+.main_logo img { max-width: 85.5px; }
+.cta { top: 28.5px; right: 219px; }
+.cta img { max-width: 105px; }
+.text_1 { left: 56px; top: 20px; }
+.text_1 img { max-width: 24.9px; }
+.text_2 { left: 84px; top: 18.5px; }
+.text_2 img { max-width: 6.7px; }
+.text_3 { left: 20px; top: 31.5px; }
+.text_3 img { max-width: 64.4px; }
+.text_4 { left: 90px; top: 10px; }
+.text_4 img { max-width: 71.1px; }
+.text_5 { left: 165.5px; top: 14px; }
+.text_5 img { max-width: 21.5px; }
+.text_6 { left: 190px; top: 11px; }
+.text_6 img { max-width: 6.7px; }
+.text_7 { left: 78px; top: 35px; }
+.text_7 img { max-width: 84.6px; }
+.text_8 { left: 169px; top: 9px; }
+.text_8 img { max-width: 83.5px; }
+.sub_text { left: 19px; top: 28px; }
+.sub_text img { max-width: 180.5px; }
+
+.heading_txt, .sub_text { opacity: 0; }
+
+.page_loader{width: 100%;height: 100%;position: absolute;z-index: 1000;background: #fff;}
+
+
+/*--CSS end here--*/
+
+</style>
+</head>
+<body>
+<!--Banner start here-->
+<div class="banner-box" id="clickTagLayer" onclick="javascript:window.open(window.clickTag)">
+  <div class="all_frame" >
+    <div class="main_bg"><img src="main_bg.jpg" alt="main_bg"></div>
+    <!-- <div class="pink_line"></div> -->
+    <div class="main_logo"><img src="main_logo.png" alt="main_logo"></div>
+    <div class="cta"><img src="cta.png" alt="cta"></div>
+    <div class="text_1 heading_txt"><img src="text_1.png" alt="text_1"></div>
+    <div class="text_2 heading_txt"><img src="text_2.png" alt="text_2"></div>
+    <div class="text_3 heading_txt"><img src="text_3.png" alt="text_3"></div>
+    <div class="text_4 heading_txt"><img src="text_4.png" alt="text_4"></div>
+    <div class="text_5 heading_txt"><img src="text_5.png" alt="text_5"></div>
+    <div class="text_6 heading_txt"><img src="text_6.png" alt="text_6"></div>
+    <div class="text_7 heading_txt"><img src="text_7.png" alt="text_7"></div>
+    <div class="text_8 heading_txt"><img src="text_8.png" alt="text_8"></div>
+    <div class="sub_text"><img src="sub_text.png" alt="sub_text"></div>
+  </div>
+  <div class="page_loader">
+  </div>
+</div>
+<!--Banner end here-->
+
+<!-- ********** CUSTOM JS ********** -->
+<script>
+
+    // <!--GSAP JS start here-->
+    //--------------- SET -----------------
+    gsap.set(".all_frame", { display: 'block', opacity: 1 });
+    //---------- Animation Event ------------
+    const animationComplete = new CustomEvent('animationComplete')
+    //---------- ADD ANIMATION ------------
+    function startAnimation() {
+      const timeline = gsap.timeline({
+        delay: 0.1,
+        defaults: {
+          duration: 0.1,
+          ease: 'none'
+        },
+      })
+      //=========================
+      .add('Scene1', '+=.1')
+      .fromTo('.heading_txt', { opacity: 0 }, { opacity: 1, duration: 0.1, delay: 0.01, stagger: 0.2, ease: "none" }, 'Scene1')
+      .to('.heading_txt', { opacity: 0, duration: 0.5, delay: 3, ease: "power1.Out" }, 'Scene1')
+
+      .add('Scene2', 'Scene1+=3.5')
+      .to('.sub_text', { opacity: 1, duration: 0.5, delay: 0.01, ease: "power1.Out" }, 'Scene2')
+      .to(".cta", {
+        keyframes: [
+          { scale: 1 },
+          { scale: 1.1 },
+          { scale: 1 },
+        ], duration: 0.7, delay: 1.5, ease: 'power1.Out'
+      }, 'Scene2')
+    }
+      //-------------------------------------
+
+    $(window).on('load', function() {
+      // Hide the loader after everything is loaded
+      $('.page_loader').fadeOut(0, function() {
+        // Start the animation once the loader is gone
+        startAnimation();
+      });
+    });
+</script>
+
+</body>
+</html>

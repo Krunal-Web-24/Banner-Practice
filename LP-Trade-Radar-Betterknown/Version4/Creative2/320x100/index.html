@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Trade Radar</title>
+<meta name="ad.size" content="width=320,height=100">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.11.5_min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">var clickTag = "https://www.google.com";</script>
+<style>
+/*--CSS start here--*/
+* { margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+body {-webkit-font-smoothing: antialiased;}
+img { border: 0; vertical-align: top; }
+.banner-box {  background: #0D1F23; margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position: relative; width: 320px; height: 100px; overflow: hidden; border:1px solid #0D1F23; -webkit-user-select: none; user-select: none; cursor: pointer; }
+.all_frame div {position: absolute;}
+.all_frame {width: 100%; height: 100%; left: 0; top: 0; position: absolute;}
+
+.btm_text {bottom: -10px; left: 13px; }
+.btm_text img {max-width: 275.5px}
+
+.alert_box {overflow: hidden;position: relative;width: 50%;height: 85px;left: 160px;}
+.alert_img{top:-1px;right: -14px;}
+.alert_img img{max-width: 182px;}
+
+.w_100 > div {position: relative !important;}
+.w_100 {width: 100%;}
+
+.tilte_line1 {top: 58px; left: 9px; width: 150px;}
+.tilte_line1 img {max-width: 140px;}
+.tilte_line2 {top: 73px; left: 9px; width: 150px;}
+.tilte_line2 img {max-width: 140px;}
+.tilte_line3 {top: 45px; left: 9px;}
+.tilte_line3 img {max-width: 163px;}
+.tilte_line4 {top: 60px; left: 9px;}
+.tilte_line4 img {max-width: 163px;}
+.tilte_line5 {top: 75px; left: 9px;}
+.tilte_line5 img {max-width: 163px;}
+
+.cta {top: 60px; left: 211px; width: 98px; }
+.cta img {max-width: 98px;}
+
+.cta,.btm_text,.logo_text { opacity: 0; }
+.hidden {overflow: hidden;}
+
+.main_logo {top: 14px;left: 9px;width: 100%;}
+.logo_text {width: auto;position: relative !important;}
+.logo_trade_l_1 img {max-width: 100px;}
+
+.shadow {top: -1px;}
+.shadow img {max-width: 320px;}
+
+.page_loader{width: 100%;height: 100%;position: absolute;z-index: 1000;background: #fff;}
+
+/*--CSS end here--*/
+
+</style>
+</head>
+<body>
+<!--Banner start here-->
+<div class="banner-box" id="clickTagLayer" onclick="javascript:window.open(window.clickTag)">
+  <div class="all_frame" >
+    <div class="main_logo">
+      <div class="logo_trade_l_1 hidden"><div class="logo_text"><img src="main_logo.png" alt=""></div></div>
+    </div>
+    <div class="alert_box">
+      <div class="alert_img"><img src="stock_alert.jpg" alt=""></div>
+    </div>
+    <div class="shadow"><img src="shadow.png" alt=""></div>
+
+    <div class="tilte_line1 hidden w_100"><div class="Innerline"><img src="f1_title_line1.png" alt=""></div></div>
+    <div class="tilte_line2 hidden w_100"><div class="Innerline"><img src="f1_title_line2.png" alt=""></div></div>
+
+    <div class="tilte_line3 hidden w_100"><div class="Innerline1"><img src="f2_title_line1.png" alt=""></div></div>
+    <div class="tilte_line4 hidden w_100"><div class="Innerline1"><img src="f2_title_line2.png" alt=""></div></div>
+    <div class="tilte_line5 hidden w_100"><div class="Innerline1"><img src="f2_title_line3.png" alt=""></div></div>
+
+    <div class="cta w_100"><div><img src="cta.png" alt=""></div></div>
+    <!-- <div class="btm_text w_100"><div><img src="btm_text.png"></div></div> -->
+  </div>
+  <div class="page_loader">
+  </div>
+</div>
+
+<!--Banner end here-->
+
+<!-- ********** CUSTOM JS ********** -->
+<script>
+
+    // <!--GSAP JS start here-->
+    //--------------- SET -----------------
+    gsap.set(".all_frame", { display: 'block', opacity: 1 });
+    //---------- Animation Event ------------
+    const animationComplete = new CustomEvent('animationComplete')
+    //---------- ADD ANIMATION ------------
+
+    function startAnimation() {
+      const timeline = gsap.timeline({
+        delay: 0.1,
+        defaults: {
+          duration: 0.1,
+          ease: 'none'
+        },
+      });
+      //=========================
+      timeline.add('Scene1')
+      .to('.logo_text', { opacity: 1, duration: 0.8, delay: 0.5, ease: "power0.Out" }, 'Scene1') 
+
+      .fromTo('.Innerline', { y: 20 }, { y: 0, duration: 0.5, delay: 0.5, stagger:0.22, ease: "power1.out" }, 'Scene1')
+      .to('.Innerline', { opacity: 0, duration: 0.5, delay: 3, ease: "power1.out" }, 'Scene1')
+
+      .fromTo('.Innerline1', { y: 20 }, { y: 0, duration: 0.5, delay: 3.5, stagger:0.22, ease: "power1.out" }, 'Scene1')
+
+      .fromTo('.alert_img',{ y: 0 }, { y: -20, duration: 3.5, delay: 0.1, ease: "power1.in" }, 'Scene1') 
+      .fromTo('.cta', { scale: 0 }, { 
+        keyframes: [
+          { scale: 1.1 },
+          { scale: 1 },
+        ], opacity:1, duration: 1, delay: 1.2, ease: 'power1.out'
+      },'Scene1')
+      .to('.cta', {
+        keyframes: [
+          { scale: 1.1 },
+          { scale: 1 },
+        ],
+        opacity: 1,
+        duration: 0.6,
+        delay: 4.5,
+        ease: "power0.out" 
+      }, 'Scene1')
+      .from('.alert_img img', {
+        keyframes: [
+          { y: -75},
+        ],
+        opacity: 1,
+        duration: 0.5,
+        delay: 4.5,
+        ease: "power0.out" 
+      }, 'Scene1');
+    }
+    
+    
+  // Call the chart animation after the page loader fades out
+  $(window).on('load', function () {
+    $('.page_loader').fadeOut(0, function () {
+      startAnimation(); // Trigger the chart path animation
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>LYBALVI®</title>
+<meta name="ad.size" content="width=300,height=250">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+<script type="text/javascript">
+    var clickTag1 = "https://www.lybalvi.com/bipolar-1-disorder/about-lybalvi";
+    var clickTag2 = "https://labeling.alkermes.com/uspi_lybalvi.pdf";
+    var clickTag3 = "https://labeling.alkermes.com/medguide_lybalvi.pdf";
+    var clickTag4 = "https://labeling.alkermes.com/uspi_lybalvi.pdf";
+    var clickTag5 = "https://labeling.alkermes.com/medguide_lybalvi.pdf"; 
+    var clickTag6 = "https://womensmentalhealth.org/research/pregnancyregistry/";    
+</script>
+<style>
+/*--CSS start here--*/
+* { margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+img { border: 0; vertical-align: top; font-family: "Open Sans", sans-serif; }
+.banner-box {  background: #fff; margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position: relative; width: 300px; height: 250px; overflow: hidden; border:1px solid #000; -webkit-user-select: none; user-select: none; cursor: pointer; }
+.all_frame div { position: absolute; }
+.all_frame { width: 100%; height: 100%; left: 0; top: 0; position: absolute; }
+.all_frame .ss { left: -1px; top: -1px; }
+.all_frame .ss img { max-width: 300px; }
+.main_frame > *, .frame5_text_1 { opacity: 0; }
+
+.all_frame .f1_bg_overlay, .all_frame .ad_sponsor_img, .all_frame .frame1_bg { opacity: 1; }
+.all_frame .frame1_logo { top: 19px; left: 7px; }
+.all_frame .frame2_logo{ z-index: 4; }
+
+/*ISI CSS*/
+.slider_box { display: block; width: 100%; height: 100%; background: #ffffff; }
+.slider_box .isiBody { width: 100%; display: block; padding: 18px 13px 15px 12px; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.isi { left: 7px; bottom: 0px; width: 284px; height: 95px; background: #ffffff; position: absolute; z-index: 99; }
+.isi .toggle_btn { width: 9px; height: 9px; right: 9px; top: 4px; position: sticky !important; cursor: pointer; z-index: 9999; }
+.banner.active .isi { height:100%; }
+.banner.active .isi .toggle_btn:after { content: '–'; top: 1px; }
+.slider_box h3, .slider_box p, .isiBody div { margin-bottom: 8px; }
+.slider_box p { margin-bottom: 7px; }
+.slider_box p:last-child, .isiBody div:last-child { margin: 0; }
+.slider_box h3 { margin-top: 6px; }
+.slider_box ul li p { margin-bottom: 0; }
+
+/* typography */
+.isi .toggle_btn:after { content: '+'; color: #569099; font: normal 12px Arial, Helvetica, sans-serif; position: absolute; width: 100%; height: 100%; text-align: center; transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); top: 30%; left: 50%; }
+.isi, .isi p { color: #333333; font: normal 12px/1.25 Open Sans, sans-serif; }
+.isi .box strong { color: #333333; }
+.isi .box p:not(:last-child) { margin: 0 0 2px; }
+.isi p sup { top: 1px; font-size: 7px; position: relative; }
+.isi h2 { font: normal 16px/1.2 Open Sans, sans-serif; font-weight:400; color:#0B2B5F; margin-bottom:3px; }
+.isi h3 { color: #0091E6; font: bold 12px/1.2 Open Sans, Arial, Helvetica, sans-serif; }
+.fix_links {position: absolute; left: 7px; top: 153px; z-index: 999; background-color: #C7EDFD; display: flex; justify-content: space-between; padding: 2.5px 10px; width: 284px; }
+.fix_links p { font: normal 11px/1.2 Open Sans, Arial, Helvetica, sans-serif; }
+.fix_links a { font: normal 11px/1.2 Open Sans, Arial, Helvetica, sans-serif; font-weight:bold; color:#114797; }
+.isi ul li { margin-bottom: 6px; }
+.isi .logo_img { text-align:center; width:100%; margin:0; }
+.isi .isi_logo_1 img { max-width: 236px; } 
+.isi .isi_logo_2 img { max-width: 253px; } 
+.isi .slider_box .isi_logo_1 { margin-top:30px; }
+.isi .slider_box .isi_logo_2 { margin-top: 6px; }
+.isi span { font-weight: bold; color:#0091E6; }
+.isi ul { list-style-type: none; margin-top: 7px;}
+.isi .outer_ul li { position: relative; padding-left: 9px; }
+.isi ul li:before { content: ""; position: absolute; left: 2px; top: 6px; background-color: #B25928; width: 2.5px; height: 2.5px; border-radius: 100%; }
+.isi .mtop8 { margin-top: 5px; margin-bottom: 7px ;}
+.isi .mb0 { margin-bottom:0; }
+.isi .inner_ul { margin-top: 6px; }
+.isi .inner_ul li:before { background-color:transparent; box-sizing:border-box; border: 0.5px solid #B25928; }
+.isi .inner_ul ul li:before { background-color: #B25928; }
+.isi a { cursor:pointer; }
+.isi span.boxed { color: #333; }
+.isi .phone{ color: #0091E6; text-decoration: none; }
+/*--CSS end here--*/
+
+</style>
+</head>
+<body>
+<!--Banner start here-->
+<div class="banner-box" id="clickTagLayer" onclick="javascript:window.open(window.clickTag1)">
+
+  <div class="all_frame">
+    <div class="main_frame">
+      <div class="frame1_bg frame_1 ss"><img data-src="frame1_bg.jpg" alt=""></div>
+      <div class="frame1_logo frame_1"><img data-src="frame1_logo.png" alt="" width="88"></div>
+      <div class="frame1_text_1 frame_1 ss"><img data-src="frame1_text_1.png" alt=""></div>
+      
+      <div class="frame2_bg frame_2 ss"><img data-src="frame2_bg.jpg" alt=""></div>
+      <div class="frame2_logo ss"><img data-src="frame2_logo.png" alt=""></div> 
+      <div class="frame2_text_1 frame_2 ss"><img data-src="frame2_text_1.png" alt=""></div>
+      
+      <div class="frame3_bg ss"><img data-src="frame3_bg.jpg" alt=""></div>
+      <div class="frame3_text_1 ss"><img data-src="frame3_text_1.png" alt=""></div>
+      
+      <div class="frame4_bg ss"><img data-src="frame4_bg.jpg" alt=""></div>
+      <div class="frame4_text_1 ss"><img data-src="frame4_text_1.png" alt=""></div>
+      
+      <div class="frame5_bg ss"><img data-src="frame5_bg.jpg" alt=""></div>
+      <div class="frame5_text_1 ss"><img data-src="frame5_text_1.png" alt=""></div>
+      
+      <div class="ad_sponsor_img ss"><img data-src="ad_sponsor_img.png" alt=""></div>
+
+    </div>
+    
+  </div>
+  <div class="fix_links">
+    <p class="fix_link"><a class="cursor_link" id="prescribing_information_sticky" onclick="javascript:window.open(window.clickTag2)"><u>Prescribing Information</u></a></p>
+    <p class="fix_link"><a class="cursor_link" id="medication_guide_sticky" onclick="javascript:window.open(window.clickTag3)"><u>Medication Guide</u></a></p>
+  </div>
+  <div class="isi" id="isi">
+    <div class="slider_box main scroll">
+      <div class="isiBody">
+        <h2>Important Safety Information</h2>
+        <p><strong>LYBALVI may cause serious side effects, including increased risk of death in elderly people with dementia-related psychosis. LYBALVI increases the risk of death in elderly people who have lost touch with reality (psychosis) due to confusion and memory loss (dementia). LYBALVI is not approved for the treatment of people with dementia-related psychosis.</strong></p>
+        <p><span>Do not take LYBALVI if you</span> are taking opioids or are experiencing acute opioid withdrawal.</p>
+        <p><span>LYBALVI may cause serious side effects, including:</span></p>
+        <ul class="outer_ul">
+          <li><span>Stroke (cerebrovascular problems) in elderly people with dementia-related psychosis that can lead to death.</span></li>
+          <li><span>Opioid withdrawal. Do not</span> take LYBALVI for at least 7 days after you stopped taking short-acting opioids and for at least 14 days after you stopped taking long-acting opioids. One of the medicines in LYBALVI (samidorphan) can cause opioid withdrawal that may be severe and cause hospitalization in people who are physically dependent on opioids. Talk to your healthcare provider if you have questions about the type of opioid you take.</li>
+          <li><span>Risk of life-threatening opioid overdose.</span> You should not start taking opioids for at least 5 days after you stop treatment with LYBALVI. One of the medicines in LYBALVI (samidorphan) can increase your chance of having an opioid overdose that can cause death if you take opioids during treatment or within 5 days after stopping treatment with LYBALVI.
+            <p class="mtop8">You can accidentally overdose in 2 ways:</p>
+            <ul class="inner_ul">
+              <li>LYBALVI blocks the effects of opioids, such as heroin, methadone, or opioid pain medicines. <span>Do not</span> take large amounts of opioids to try to overcome the opioid-blocking effects of LYBALVI. This can lead to serious injury, coma, or death.</li>
+              <li>After you take LYBALVI, its blocking effect slowly decreases and completely goes away over time. You may be more sensitive to the effects of opioids. If you have used opioid street drugs or opioid-containing medicines in the past, using opioids in amounts that you used before treatment with LYBALVI can lead to overdose or death.</li>
+            </ul>
+            <p>It is important that you tell your family and the people closest to you of this increased sensitivity to opioids and the risk of overdose.</p>
+            <h3>You or someone close to you should get emergency medical help right away if you:</h3>
+            <ul class="inner_ul">
+              <li>have trouble breathing</li>
+              <li>become very drowsy with slowed breathing</li>
+              <li>have slow, shallow breathing (little chest movement with breathing)</li>
+              <li>feel faint, very dizzy, confused, or have unusual symptoms</li>
+            </ul>
+            <p>Tell your healthcare provider if you are taking LYBALVI before a medical procedure or surgery.</p>
+          </li>
+          <li><span>Neuroleptic malignant syndrome (NMS), a serious condition that can lead to death.</span> Call your healthcare provider or go to the nearest hospital emergency room right away if you have some or all of the following signs and symptoms of NMS:
+            <ul class="inner_ul">
+              <li>high fever</li>
+              <li>stiff muscles</li>
+              <li>confusion</li>
+              <li>sweating</li>
+              <li>changes in your breathing, pulse, heart rate, and blood pressure</li>
+            </ul>
+          </li>
+          <li><span>Drug Reaction with Eosinophilia and Systemic Symptoms (DRESS):</span> One of the medicines in LYBALVI (olanzapine) can cause DRESS, which can cause death. Tell your healthcare provider right away if you develop any of the following symptoms of DRESS, including:
+            <ul class="inner_ul">
+              <li>rash</li>
+              <li>swollen glands</li>
+              <li>liver problems</li>
+              <li>heart problems</li>
+              <li>fever</li>
+              <li>kidney problems</li>
+              <li>lung problems</li>
+            </ul>
+          </li>
+          <li><span>Problems with your metabolism such as:</span>
+            <ul class="inner_ul">
+              <li><span>high blood sugar (hyperglycemia) and diabetes.</span> Increases in blood sugar can happen in some people who take LYBALVI. Extremely high blood sugar can lead to coma or death. Your healthcare provider should check your blood sugar before you start and regularly during treatment with LYBALVI.
+                <p class="mtop8"><span>Call your healthcare provider if you have any of these symptoms of high blood sugar during treatment with LYBALVI:</span></p>
+                <ul>
+                  <li>feel very thirsty</li>
+                  <li>feel very hungry</li>
+                  <li>feel sick to your stomach</li>
+                  <li>need to urinate more than usual</li>
+                  <li>feel weak or tired</li>
+                  <li>feel confused, or your breath smells fruity</li>
+                </ul>
+              </li>
+              <li><span>increased fat levels (cholesterol and triglycerides) in your blood.</span> Your healthcare provider should check the fat levels in your blood before you start and regularly during treatment with LYBALVI.</li>
+              <li><span>weight gain.</span> You and your healthcare provider should check your weight before you start and often during treatment with LYBALVI.</li>
+            </ul>
+          </li>
+          <li><span>Uncontrolled body movements (tardive dyskinesia).</span> LYBALVI may cause movements that you cannot control in your face, tongue, or other body parts. Tardive dyskinesia may not go away, even if you stop taking LYBALVI. Tardive dyskinesia may also start after you stop taking LYBALVI.
+          </li>
+          <li><span>Decreased blood pressure (orthostatic hypotension) and fainting.</span> You may feel lightheaded or faint when you rise too quickly from a sitting or lying position.</li>
+          <li><span>Falls.</span> LYBALVI may make you sleepy or dizzy, may cause a decrease in your blood pressure when changing position (orthostatic hypotension), and can slow your thinking and motor skills, which may lead to falls that can cause fractures or other injuries.</li>
+          <li><span>Low white blood cell count.</span> Your healthcare provider may do blood tests during the first few months of treatment with LYBALVI.</li>
+          <li><span>Difficulty swallowing</span> that can cause food or liquid to get into your lungs.</li>
+          <li><span>Seizures (convulsions).</span></li>
+          <li><span>Problems controlling your body temperature so that you feel too warm.</span></li>
+          <li><span>Increased prolactin levels in your blood.</span> Your healthcare provider may do blood tests to check your prolactin levels during treatment with LYBALVI.</li>
+        </ul>
+        <p><span>The most common side effects of LYBALVI when used to treat people with schizophrenia include:</span></p>
+        <ul class="outer_ul">
+          <li>weight gain</li>
+          <li>dry mouth</li>
+          <li>sleepiness</li>
+          <li>headache</li>
+        </ul>
+        <h3>The most common side effects of LYBALVI when used alone to treat people with mixed or manic episodes that happen with bipolar I disorder include:</h3>
+        <ul class="outer_ul">
+          <li>weakness</li>
+          <li>constipation</li>
+          <li>sleepiness</li>
+          <li>shaking</li>
+          <li>dry mouth</li>
+          <li>increased appetite</li>
+          <li>dizziness</li>
+        </ul>
+        <h3>The most common side effects of LYBALVI when used in combination with lithium or valproate to treat people with mixed or manic episodes that happen with bipolar I disorder include:</h3>
+        <ul class="outer_ul">
+          <li>dry mouth</li>
+          <li>increased appetite</li>
+          <li>back pain</li>
+          <li>problems speaking</li>
+          <li>memory problems</li>
+          <li>weight gain</li>
+          <li>dizziness</li>
+          <li>constipation</li>
+          <li>mouth watering</li>
+          <li>numbness and tingling in your arm and legs
+            <p class="mtop8"><span>Do not</span> drive a car, operate machinery, or do other dangerous activities until you know how LYBALVI affects you. LYBALVI may make you feel drowsy.</p>
+            <p class="mtop8">Avoid drinking alcohol during treatment with LYBALVI.</p>
+            <p class="mtop8">Avoid getting over-heated or dehydrated.</p>
+            <ul class="inner_ul">
+              <li><span>Do not</span> exercise too much.</li>
+              <li>In hot weather, stay inside in a cool place if possible.</li>
+              <li>Stay out of the sun. <span>Do not</span> wear too much clothing or heavy clothing.</li>
+              <li>Drink plenty of water.</li>
+            </ul>
+          </li>
+        </ul>
+        <h3>Before taking LYBALVI, tell your healthcare provider about all of your medical conditions, including if you:</h3>
+        <ul class="outer_ul">
+          <li>have or had heart problems or a stroke</li>
+          <li>use or abuse street (illegal) drugs</li>
+          <li>have or had low or high blood pressure</li>
+          <li>have kidney problems</li>
+          <li>have diabetes or high blood sugar or a family history of diabetes or high blood sugar</li>
+          <li>have or have had high levels of total cholesterol, LDL cholesterol, or triglycerides or low levels of HDL cholesterol</li>
+          <li>have or had a low white blood cell count</li>
+          <li>have problems swallowing</li>
+          <li>have or had seizures (convulsions)</li>
+          <li>have or had problems with urination or prostate problems</li>
+          <li>have or had breast cancer</li>
+          <li>have or had constipation or a bowel obstruction</li>
+          <li>have or had high prolactin levels</li>
+          <li>are pregnant or plan to become pregnant. Talk to your healthcare provider about the risks to you and your unborn or newborn baby if you take LYBALVI during pregnancy.
+            <ul class="inner_ul">
+              <li>Tell your healthcare provider right away if you become pregnant or think you are pregnant during treatment with LYBALVI.</li>
+              <li>If you become pregnant during treatment with LYBALVI, talk to your healthcare provider about registering with the National Pregnancy Registry for Atypical Antipsychotics. You can register by calling <span><a class="phone" href="tel:18669612388">1-866-961-2388</a></span> or visit <span><a class="cursor_link" id="pregnancyregistry" onclick="javascript:window.open(window.clickTag6)">http://womensmentalhealth.org/clinical-and-research-programs/pregnancyregistry/</a></span></li>
+            </ul>
+          </li>
+          <li>are breastfeeding or plan to breastfeed. LYBALVI passes into your breast milk. Talk to your healthcare provider about the best way to feed your baby during treatment with LYBALVI.</li>
+        </ul>
+        <p><span>Tell your healthcare provider about all the medicines you take,</span> including prescription and over-the-counter medicines, vitamins, and herbal supplements.</p>
+        <p>LYBALVI and other medicines may affect each other causing possible serious side effects.</p>
+        <p>LYBALVI may affect the way other medicines work, and other medicines may affect how LYBALVI works.</p>
+        <h3>Especially tell your healthcare provider if you:</h3>
+        <ul class="outer_ul">
+          <li>take opioids or have stopped taking opioids in the past 14 days</li>
+          <li>take or plan to take other olanzapine containing medicines</li>
+        </ul>
+        <p>Your healthcare provider can tell you if it is safe to take LYBALVI with your other medicines. <span>Do not</span> start or stop any medicines while taking LYBALVI without first talking to your healthcare provider.</p>
+        <p>Tell your healthcare provider if you take a urine drug screening test because LYBALVI may affect your test results. Tell those giving the drug screening test that you are taking LYBALVI.</p>
+        <p>These are not all the possible side effects of LYBALVI.</p>
+        <p>Call your healthcare provider for medical advice about side effects. You may report side effects to FDA at <span><nobr>1-800-FDA-1088</nobr></span>.</p>
+        <h2 class="mtop8">Indications</h2>
+        <p>LYBALVI is a prescription medicine which contains 2 medicines (olanzapine and samidorphan) used in adults:</p>
+        <ul class="outer_ul">
+          <li>to treat schizophrenia</li>
+          <li>alone for short-term (acute) or maintenance treatment of manic or mixed episodes that happen with bipolar I disorder</li>
+          <li>in combination with valproate or lithium to treat manic or mixed episodes that happen with bipolar I disorder</li>
+        </ul>
+        <p>It is not known if LYBALVI is safe or effective in children.</p>
+        <p><strong>Please see full</strong> <span><a class="cursor_link" id="prescribing_information_isi" onclick="javascript:window.open(window.clickTag4)"><u>Prescribing Information</u></a></span><strong>, including</strong> <span class="boxed">Boxed Warning</span><strong>, and</strong> <span><a class="cursor_link" id="prescribing_information_isi" onclick="javascript:window.open(window.clickTag5)"><u>Medication Guide</u></a></span><strong>.</strong></p>
+        <div class="logo_img">
+          <div class="isi_logo_1"><img data-src="isi_logo_1.png" alt=""></div>
+        </div>
+        <div class="logo_img">
+          <div class="isi_logo_2"><img data-src="isi_logo_2.png" alt=""></div>
+        </div>
+        <p class="mb0">ALKERMES<sup>®</sup> is a registered trademark of Alkermes, Inc. LYBALVI<sup>®</sup> and logo are registered trademarks of Alkermes Pharma Ireland Limited, used by Alkermes, Inc., under license.</p>
+        <p>©2024 Alkermes, Inc. All rights reserved. <nobr>LYB-003137</nobr></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--Banner end here-->
+
+<!-- ********** GLOBAL ISI JS ********** -->
+<script>
+  const Scroll = ({
+    event = 'animationEnd webkitAnimationEnd mozAnimationEnd',
+    on,
+    slider = 8,
+    color = 'rgba(0,0,0,.75)',
+    track = '#ffffff',
+    curve = '50px',
+    arrow,
+    delay,
+    speed,
+    stopOnMove = true,
+    stopOnClick = false,
+  }) => {
+    let sBox = document.querySelector('.main')
+    if (!sBox) return setTimeout(Scroll, 100, { event, on, slider, color, track, curve, arrow, delay, speed })
+
+    const html = sBox.innerHTML
+    sBox.innerHTML = ''
+    const
+      sBar = sBox.appendChild(document.createElement('b')),
+      sTab = sBar.appendChild(document.createElement('b')),
+      sEl = sBox.appendChild(document.createElement('article'))
+    sEl.id = 'html'
+    sEl.innerHTML = html
+
+    sBar.style.background = track
+    sTab.style.background = color
+    sBar.style.borderRadius = sTab.style.borderRadius = curve
+    let sRatio = sBar.clientHeight / sEl.scrollHeight
+    const
+      ua = navigator.userAgent.toLowerCase(),
+      // safari = ua.indexOf('safari') > -1 && ua.indexOf('chrome') < 0,
+      interval = 1000 / (speed || 1)
+    window.scroll = {
+      draw: () => {
+        let h = sEl.offsetHeight * sBar.clientHeight / sEl.scrollHeight
+        const thumb = parseFloat(slider) * (typeof slider === 'string' && slider.endsWith('%') ? sBar.clientHeight / 100 : 1)
+        h = Math.round(h < thumb && thumb < sBar.clientHeight ? thumb : h)
+        sTab.style.height = `${h}px`
+        sRatio = (sBar.clientHeight - h) / (sEl.scrollHeight - sEl.offsetHeight)
+        sTab.style.top = `${Math.abs(sEl.scrollTop * sRatio) || 0}px`
+        sBox.classList[sEl.scrollTop > 10 ? 'add' : 'remove']('away')
+      },
+      by: val => sEl.scrollTop += (val || 1),
+      auto: e => {
+        scroll.stop()
+        setTimeout(() => {
+          scroll.id = setInterval(scroll.by, interval)
+          // if (safari) setTimeout(() => scroll.safariId = setInterval(scroll.by, interval), interval / 2)
+        }, delay || 0)
+      },
+      stop: () => {
+        clearInterval(scroll.id)
+        clearInterval(scroll.safariId)
+      }
+    }
+    scroll.draw()
+
+    const when = (el, e, cb, one) => el && e.split(' ').forEach(e => el.addEventListener(e, cb, one && { once: true })) || el
+    when(sBox, 'click', e => e.target.tagName !== 'a' && e.stopPropagation())
+    when(sBox, event, scroll.draw)
+    when(sEl, 'scroll', scroll.draw)
+    when(sEl, `${stopOnClick ? 'click touchstart' : ''} ${stopOnMove ? 'touchmove' : ''} mousewheel DOMMouseScroll`, scroll.stop)
+    when(sBar, 'mousedown', () => when(document, 'mouseup', scroll.stop))
+    if (!event) scroll.auto()
+    else when(document.querySelector(on) || sBox, event, scroll.auto , true)
+    let el = null, elY = 0
+    const at = e => document.all ? window.event.clientY : e.pageY
+    when(sTab, 'mousedown', e => elY = at(e) - (el = e.target).offsetTop)
+    when(document, 'mousemove', e => el !== null && (sEl.scrollTop = (at(e) - elY) / sRatio))
+    when(document, 'mouseup', () => el = stopOnClick && scroll.stop() || null)
+    if (arrow) {
+      const dir = by => e => scroll.by(by)
+      when(sBar.appendChild(document.createElement('i')), 'mousedown', dir(-25))
+      .style.borderColor = `transparent transparent ${arrow}`
+      when(sBar.appendChild(document.createElement('i')), 'mousedown', dir(25))
+      .style.borderColor = `${arrow} transparent transparent`
+    }
+  }
+</script>
+
+<!-- ********** GLOBAL ISI CSS - Scroll ********** -->
+<style>
+  .main,
+  div {cursor: pointer;}
+  .main div { cursor: default; }
+  .main:not(.bnfy-enter) { max-height: 100%; }
+  .main { box-sizing: border-box; overflow-x: hidden; background-color: #ffffff; }
+  .main * { box-sizing: border-box; }
+  .main div, .main img { position: static !important; }
+  #html { display: block; max-height: 100%; overflow-x: hidden; word-break: break-word; -ms-overflow-style: none; scrollbar-width: none; }
+  #html::-webkit-scrollbar { display: none; }
+  .scroll { margin-right: 12px !important; }
+  .scroll>a { display: block; padding: 6px 0; }
+  .main>b:first-child,
+  .main>b:first-child b { display: block; min-width: 6px; min-height: 7px; border-radius: 0; position: absolute; z-index: 1; }
+  .main>b:first-child { top: 15px; bottom: 15px; right: 0px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+  .main>b:first-child b { cursor: pointer; }
+  .main>b:first-child i { display: block; position: absolute; border-width: 6px; border-style: solid; border-image: initial; margin: -15px -3px; cursor: pointer; z-index: 1; }
+  .main>b:first-child i + i { bottom: 0; }
+</style>
+
+<!-- ********** GLOBAL ISI CSS ********** -->
+<style>
+  .fpo:after { content: 'FPO'; position: absolute; top: 50%; left: 50%; transform: rotate(-45deg) translate(-50%, -50%); font-size: 32px; transform-origin: left top; font-weight: bold; color: #ff00ff; }
+  .main > *:not(b) { padding: 0 6px !important; }
+  .main .box { padding: 6px !important; border: 1px solid; font-weight: bold; }
+</style>
+
+<!-- ********** BANNER ISI CSS ********** -->
+<style>
+  .main { text-transform: initial; background-color: #ffffff; }
+  .main > *:not(b) { padding: 0 !important; }
+  .main>b:first-child { top: 20px !important; bottom: 0px !important; min-width: 6px; border: 1px solid #c3dcd7; }
+  .main>b:first-child b {min-width: 4px;}
+  .main .pi { position: sticky; top: 0; background-color: #ffffff; margin-top: 0; padding-top: 6px !important; padding-bottom: 6px !important; border-bottom: 1px solid #9a9a9a; }
+</style>
+
+<!-- ********** BANNER ISI JS - Scroll ********** -->
+<script>
+  Scroll({
+    event: 'animationComplete', // auto scroll on these events
+    on: 'body', // auto scroll on above events on this element (default: on: '.main')
+    // arrow: '#0000ff', // scroll arrow
+    slider: 14, // scroll slider minimum height
+    color: '#555555', // scroll slider color
+    // track: '#d3d3d3', // scroll slider background
+    curve: '0', // scroll slider curve `50px` or `30px 0 30px 0`
+    delay: 1000, // in milliseconds 1000ms = 1s
+    speed: 10,
+    // stopOnMove: false
+    // stopOnClick: true
+  })
+</script>
+
+<!-- ********** CUSTOM JS ********** -->
+<script>
+  window.addEventListener('load', () => Promise.all([...document.querySelectorAll('img[data-src]')].map(img => new Promise((res, rej) => {
+    img.onload = res
+    img.src = img.dataset.src
+  }))).then(load))
+
+  function animate() {
+    // <!--GSAP JS start here-->
+    //--------------- SET -----------------
+    gsap.set(".banner-box", { display: 'block' });
+    //---------- Animation Event ------------
+    const animationComplete = new CustomEvent('animationComplete')
+    //---------- ADD ANIMATION ------------
+    gsap.timeline({
+      delay: 0,
+      defaults: {
+        ease: 'none',
+      },
+      onComplete: () => document.body.dispatchEvent(animationComplete),
+    })
+
+    .add('Scene1')
+    .fromTo('.frame1_logo', { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.5, delay: 0.1, ease: "power1.out" }, 'Scene1') 
+    .fromTo('.frame1_text_1', { opacity: 1, y: -130 }, { opacity: 1, y: 0, duration: 0.5, delay: 0.6, ease: "power1.out" }, 'Scene1')
+    .to('.frame2_bg', { opacity: 1, duration: 0.5, delay: 7.9, ease: "power1.out" }, 'Scene1') 
+    .to('.frame2_logo', { opacity: 1, duration: 0.5, delay: 7.9, ease: "power1.out" }, 'Scene1') 
+    .to('.frame_1', { opacity: 0, duration: 0.5, delay: 8, ease: "power1.out" }, 'Scene1')
+    
+    .add('Scene2')
+    .fromTo('.frame2_text_1', { opacity: 0, y: 30}, { opacity: 1, y: 0, duration: 0.5, delay: 0.1, ease: "power1.out" }, 'Scene2') 
+    .to('.frame2_text_1, .frame2_bg', { opacity: 0, duration: 0.5, delay: 5, ease: "power1.out" }, 'Scene2')
+    .fromTo('.frame3_bg', { opacity: 0 }, { opacity: 1, duration: 0.5, delay: 5, ease: "power1.out" }, 'Scene2') 
+
+    .add('Scene3')
+    .fromTo('.frame3_text_1', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, delay: 0.1, ease: "power1.out" }, 'Scene3')
+    .to('.frame3_text_1', { opacity: 0, duration: 0.5, delay: 5, ease: "power1.out" }, 'Scene3') 
+    .to('.frame4_bg', { opacity: 1, duration: 0.5, delay: 5, ease: "power1.out" }, 'Scene3') 
+    .to('.frame3_bg', { opacity: 0, duration: 0.5, delay: 5, ease: "power1.out" }, 'Scene3')
+
+    .add('Scene4')
+    .fromTo('.frame4_text_1', { opacity: 0, y: 30}, { opacity: 1, y: 0, duration: 0.5, delay: 0.1, ease: "power1.out" }, 'Scene4') 
+    .to('.frame4_text_1', { opacity: 0, y:30, duration: 0.5, delay: 4.8, ease: "power1.out" }, 'Scene4') 
+    .to('.frame5_bg', { opacity: 1, duration: 0.5, delay: 5, ease: "power1.out" }, 'Scene4') 
+    .to('.frame4_bg', { opacity: 0, duration: 0.5, delay: 5, ease: "power1.out" }, 'Scene4')
+
+    .add('Scene5')
+    .fromTo('.frame5_text_1', { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.5, ease: "power1.out" }, 'Scene5')
+
+      //-------------------------------------
+  }    
+</script>
+<script>
+  function load() {
+    animate()
+  }
+</script>
+
+<!-- Custom -->
+<style>
+  .main>b:first-child { border: none !important; min-width: 4px !important; background: #c6c6c6 !important; top: 48px !important; right: 4px!important; bottom: 3px !important; z-index: 999; border-radius: 3px!important; }
+  .main>b:first-child b { min-width: 4px; background: #555555!important; border-radius: 3px!important; }
+</style>
+
+</body>
+</html>
